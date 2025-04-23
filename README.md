@@ -1,2 +1,4 @@
 # 350toinfinity
-A shared repository for our QTM 350 final project
+Hello! 
+
+Welcome to the shared repository for our QTM 350 final project.
