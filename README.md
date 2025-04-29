@@ -1,11 +1,16 @@
 # 350toinfinity
 
 ## Project Overview
-This repository contains the final project for QTM 350, titled **"Are We Getting Smarter or Just Richer?"**. The project analyzes trends in education enrollment and economic growth across the 15 most populous countries from 2000 to 2022. Using data from the World Bank's World Development Indicators (WDI), we examine the relationship between GDP per capita growth and changes in primary, secondary, and tertiary school enrollment rates.
+This repository contains the final project for QTM 350: **"Are We Getting Smarter or Just Richer? A Global Analysis of Education Enrollment and Economic Growth (2000-2022)"**. The project analyzes trends in education development and economic growth across the 15 most populous countries in the world from 2000 to 2022. Using data from the World Bank's World Development Indicators (WDI), we examine the relationship between GDP per capita growth and changes in primary, secondary, and tertiary school enrollment rates.
 
 The repository includes:
 - A **[Quarto website](https://lmuir21.github.io/350toinfinity/)** with detailed sections of the analysis.
 - A **standalone report** rendered in both [HTML](https://lmuir21.github.io/350toinfinity/analysis_report.html) and [PDF](https://lmuir21.github.io/350toinfinity/analysis_report.pdf) formats.
+- Python and SQL scripts for data cleaning and analysis.
+- The cleaned dataset (`epi_top15.csv`) used for the analysis.
+- An accompanying codebook (`codebook.md`) located in the `documentation` folder, describing the dataset's variables and structure.
+
+---
 
 ## How to Run the Code
 
@@ -47,9 +52,27 @@ To render the standalone report:
 
 ### Deployment
 
-Once the website and report are rendered, push the docs folder to your GitHub repository. Configure GitHub Pages to serve content from the docs folder. This will make both the website and the standalone report accessible online.
+To deploy the website and report:
+
+1. Push the docs folder to your GitHub repository:
+    ```bash
+    git add .
+    git commit -m "Add rendered website and report"
+    git push origin main
+    ```
+2. Ensure that GitHub Pages is enabled for the `docs` folder in your repository settings.
+3. The website will be available at `https://<your-username>.github.io/350toinfinity/`.
+4. The report will be available at `https://<your-username>.github.io/350toinfinity/analysis_report.html`.
+5. You can also download the PDF report directly from the `docs` folder.
+
+### License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+### Acknowledgments
+This project was completed as part of the QTM 350 course at Emory University. Special thanks to our instructor Prof. Freire for teaching this course and to TAs Alex and Harris for their invaluable guidance throughout the semester. 
 
 ### Authors
 - Daisy Cossio
 - Iliyan Sherali
 - Liane Muir
+
