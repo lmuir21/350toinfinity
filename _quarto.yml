@@ -3,7 +3,7 @@ project:
   output-dir: docs  # Output files for the website will be placed in the docs folder
 
 website:
-  title: "Are We Getting Smarter or Just Richer?"
+  title: "QTM 350 Final Project"
   navbar:
     left:
       - text: "Home"
