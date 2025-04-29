@@ -1,0 +1,122 @@
+---
+title: "Data Analysis"
+format: html
+---
+
+We examined how economic and educational growth unfolded across the 15 most populous countries from 2000 to 2022. Our analysis combined descriptive trends, growth metrics, and quadrant-based classifications to assess whether countries are "growing smarter" or "just richer."
+
+## 1. Trends in GDP and Education Enrollment
+
+For each country, we visualized:
+
+- **GDP per capita** trends over time (with trendlines).
+- **Primary, Secondary, and Tertiary Enrollment** rates over time.
+
+### Ethiopia (ETH)
+
+#### GDP per Capita Over Time
+![GDP per Capita Over Time - Ethiopia](scripts\figures\ETH_gdp_per_capita_trend.png)
+
+#### Enrollment Rates Over Time
+![Enrollment Rates Over Time - Ethiopia](scripts\figures\ETH_enrollment_trends_trend.png)
+
+### India (IND)
+
+#### GDP per Capita Over Time
+![GDP per Capita Over Time - India](scripts\figures\IND_gdp_per_capita_trend.png)
+
+#### Enrollment Rates Over Time
+![Enrollment Rates Over Time - India](scripts\figures\IND_enrollment_trends_trend.png)
+
+### China (CHN)
+
+#### GDP per Capita Over Time
+![GDP per Capita Over Time - China](scripts\figures\CHN_gdp_per_capita_trend.png)
+
+#### Enrollment Rates Over Time
+![Enrollment Rates Over Time - China](scripts\figures\CHN_enrollment_trends_trend.png)
+
+### Pakistan (PAK)
+
+#### GDP per Capita Over Time
+![GDP per Capita Over Time - Pakistan](scripts\figures\PAK_gdp_per_capita_trend.png)
+
+#### Enrollment Rates Over Time
+![Enrollment Rates Over Time - Pakistan](scripts\figures\PAK_enrollment_trends_trend.png)
+
+### Egypt (EGY)
+
+#### GDP per Capita Over Time
+![GDP per Capita Over Time - Egypt](scripts\figures\EGY_gdp_per_capita_trend.png)
+
+#### Enrollment Rates Over Time
+![Enrollment Rates Over Time - Egypt](scripts\figures\EGY_enrollment_trends_trend.png)
+
+### Democratic Republic of Congo (COD)
+
+#### GDP per Capita Over Time
+![GDP per Capita Over Time - Congo](scripts\figures\COD_gdp_per_capita_trend.png)
+
+#### Enrollment Rates Over Time
+![Enrollment Rates Over Time - Congo](scripts\figures\COD_enrollment_trends_trend.png)
+
+## 2. Construction of Education Progress Index (EPI)
+
+We conducted Principal Component Analysis (PCA) on scaled enrollment indicators to produce a single Education Progress Index (EPI) score for each country-year.
+
+The EPI captures general educational improvement across all three levels (primary, secondary, tertiary).
+
+## 3. Growth Metrics: GDP vs. EPI
+
+We calculated two growth measures:
+
+- **GDP per Capita CAGR (Compound Annual Growth Rate)**: Measures average annual GDP growth.
+- **Total EPI Change**: Measures improvement in the composite education index over time.
+
+Countries were classified into quadrants based on their growth patterns:
+
+| Quadrant               | Description                              |
+|------------------------|------------------------------------------|
+| Smart + Rich           | GDP and EPI both increased              |
+| Rich but Not Smarter   | GDP increased but EPI stagnated/declined|
+| Smarter but Poorer     | EPI increased despite GDP stagnation    |
+| Losing on Both Fronts  | Both GDP and EPI declined               |
+
+![GDP Growth vs. Education Progress (Quadrant Classification)](scripts\figures\gdp_vs_epi_quadrants_colored.png)
+
+12 out of 15 countries fell into the "Smart + Rich" quadrant.
+
+3 countries were classified as "Rich but Not Smarter."
+
+## 4. Correlation Between Economic Growth and Education Levels
+
+We investigated the relationship between GDP per capita and enrollment rates:
+
+![Scatterplots of GDP per capita vs Primary, Secondary, and Tertiary Enrollment](scripts\figures\gdp_vs_education_correlations.png)
+
+- Weak correlation for primary education (r ≈ 0.13).
+- Moderate correlation for secondary education (r ≈ 0.50).
+- Strong correlation for tertiary education (r ≈ 0.71).
+
+Higher GDP countries tend to have higher tertiary enrollment rates, highlighting tertiary education as a key differentiator.
+
+## 5. Geographic and Group Comparisons
+
+We produced additional insights through:
+
+- Barplots of top 5 countries by GDP growth vs education progress.
+- Pie chart summarizing distribution of countries by quadrant.
+
+![Top 5 richest vs. top 5 smartest barplots](scripts\figures\top5_smart_vs_rich.png)
+
+![Pie chart of Quadrant Distribution](scripts\figures\quadrant_pie_chart.png)
+
+These visualizations demonstrate regional disparities and highlight the divergence between economic and human capital development.
+
+## 6. Focused Analysis by Quadrant
+
+We further analyzed GDP-education correlations separately for "Smart + Rich" and "Rich but Not Smarter" countries:
+
+![Scatterplot matrices of GDP vs Enrollment within each quadrant](scripts\figures\gdp_vs_education_by_quadrant.png)
+
+"Smart + Rich" countries show stronger and more consistent positive correlations, especially at tertiary levels.

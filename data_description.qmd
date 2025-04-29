@@ -1,0 +1,56 @@
+---
+title: "Data Description"
+format: html
+---
+
+## Data Source
+
+Our dataset originates from the **World Bank's World Development Indicators (WDI)** database, accessed using the `wbgapi` Python package. The original WDI database offers over 1,600 socioeconomic indicators for more than 200 countries from 1960 to 2023.
+
+For this project, we focused on a subset of indicators relevant to economic growth and educational attainment:
+
+- **GDP_per_capita**: GDP per capita (constant 2015 USD) — NY.GDP.PCAP.KD
+- **GDP_growth**: Annual GDP growth rate (%) — NY.GDP.MKTP.KD.ZG
+- **Primary_enrollment**: Gross enrollment in primary education (%) — SE.PRM.ENRR
+- **Secondary_enrollment**: Gross enrollment in secondary education (%) — SE.SEC.ENRR
+- **Tertiary_enrollment**: Gross enrollment in tertiary education (%) — SE.TER.ENRR
+- **Education_expenditure**: Education spending as a % of GDP — SE.XPD.TOTL.GD.ZS
+- **Population**: Total population — SP.POP.TOTL
+
+## Country Selection
+
+Rather than analyzing all available countries, we **restricted the dataset to the 15 most populous countries in 2022**.  
+This choice was made to:
+- Focus on countries with large, impactful populations.
+- Increase comparability across economies of different sizes.
+- Avoid missing data from smaller or less consistently reported nations.
+
+The selected countries represent a wide range of income levels, education systems, and regional backgrounds.
+
+## Data Cleaning and Processing
+
+We undertook the following steps:
+
+1. **Data Download and Merge**:
+   - Pulled each indicator individually using the WDI API.
+   - Merged datasets on `country` and `year` keys.
+
+2. **Filtering**:
+   - Retained only recognized countries (excluding aggregates such as "World" or "Euro Area").
+   - Selected the top 15 countries by 2022 population.
+
+3. **Calculations**:
+   - Computed **year-over-year (YoY) percentage changes** for GDP per capita and all three education enrollment indicators.
+
+4. **Handling Missing Data**:
+   - For educational indicators with missing entries, we imputed missing values with the **column mean** before principal component analysis (PCA).
+
+5. **Feature Engineering**:
+   - Created an **Education Progress Index (EPI)** through **Principal Component Analysis (PCA)**, summarizing combined progress in primary, secondary, and tertiary enrollment.
+   - Computed **Compound Annual Growth Rate (CAGR)** for GDP per capita across 2000–2022.
+
+6. **Final Dataset**:
+   - 345 country-year observations (15 countries × ~23 years each).
+   - Saved to `top15_countries_with_yoy.csv` for analysis.
+
+This preparation ensured a robust, comparable dataset for investigating trends in economic growth versus educational progress.

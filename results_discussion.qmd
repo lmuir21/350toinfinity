@@ -1,0 +1,35 @@
+---
+title: "Results & Discussion"
+format: html
+---
+
+# Results and Discussion
+
+Our analysis reveals nuanced patterns in the relationship between economic growth and education progress among the 15 most populous countries from 2000 to 2022.
+
+## 1. Growth Classifications
+
+- **80% (12 of 15) countries** fell into the **"Smart + Rich"** quadrant, indicating simultaneous growth in both GDP per capita and education progress.
+- **20% (3 of 15) countries** were classified as **"Rich but Not Smarter,"** demonstrating economic gains without significant improvements in educational access.
+
+This suggests that for the majority of high-population countries, economic growth has been accompanied by some degree of educational advancement. However, the presence of "Rich but Not Smarter" countries highlights that growth in income alone does not guarantee improvements in human capital.
+
+## 2. GDP-Education Correlations
+
+- **Primary education enrollment** showed a weak correlation with GDP per capita (r ≈ 0.13).
+- **Secondary education enrollment** displayed a moderate correlation (r ≈ 0.50).
+- **Tertiary education enrollment** had a strong correlation (r ≈ 0.71).
+
+These findings indicate that while primary education is near-universal across income levels, higher education access remains highly dependent on economic resources. Tertiary education, in particular, is a critical dimension where disparities emerge as countries develop.
+
+## 3. Regional and Country-Specific Patterns
+
+- **China (CHN)** and **India (IND)** demonstrated both high GDP growth and strong education gains, aligning well with the "Smart + Rich" classification.
+- **Democratic Republic of Congo (COD)** and **Pakistan (PAK)**, although economically growing, showed weaker improvements in educational progress, particularly at the tertiary level.
+- Countries like **Ethiopia (ETH)** made notable strides in education despite moderate GDP growth, emphasizing that proactive education policy can drive human development even in resource-constrained environments.
+
+## 4. Sustainability and Equity Implications
+
+The strong linkage between tertiary education and GDP suggests that long-term sustainable development depends on expanding access to higher education. If countries neglect educational investment while focusing solely on economic output, they risk exacerbating inequality and stalling human capital growth.
+
+Thus, education should not be viewed merely as an outcome of growth but as a **driver** of continued, equitable, and sustainable development.

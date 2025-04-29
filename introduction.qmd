@@ -1,0 +1,8 @@
+---
+title: "Introduction"
+format: html
+---
+
+Gross Domestic Product (GDP) growth is widely regarded as a primary indicator of a country's economic health. It typically signifies rising incomes, improved infrastructure, and increased production of goods and services. However, GDP growth alone does not necessarily guarantee improvements in human development, reductions in inequality, or sustainable progress. Education, on the other hand, is a foundational driver of human capital development, social mobility, and long-term economic resilience. It shapes a population’s capacity for innovation, civic engagement, and sustainable resource management.
+
+This project explores the critical question: **Are we growing smarter or just richer?** Specifically, we compare trends in economic growth and educational enrollment across a global sample of countries from 2000 to 2022. Using indicators from the World Bank’s World Development Indicators (WDI) dataset, we examine the relationship between GDP per capita growth rates and changes in primary, secondary, and tertiary school enrollment rates. By analyzing both dimensions together, we aim to assess whether improvements in economic conditions are matched by investments in human capital through education.

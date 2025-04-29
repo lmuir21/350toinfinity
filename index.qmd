@@ -1,0 +1,8 @@
+---
+title: "Are We Getting Smarter or Just Richer?"
+format: html
+---
+
+# Welcome
+
+This website presents an analysis of education enrollment and economic growth trends across the 15 most populous countries from 2000 to 2022. Use the navigation bar to explore the sections of the report and see data for slected countries from our global sample.

@@ -1,0 +1,255 @@
+---
+title: "Are We Getting Smarter or Just Richer?"
+subtitle: "A Global Analysis of Education Enrollment and Economic Growth (2000-2022)"
+author: 
+  - "Daisy Cossio"
+  - "Iliyan Sherali"
+  - "Liane Muir"
+date: "4-28-25"
+format:
+  html:
+    theme: cosmo
+    output-dir: docs
+  pdf:
+    output-dir: docs
+---
+
+# Introduction
+
+Gross Domestic Product (GDP) growth is widely regarded as a primary indicator of a country's economic health. It typically signifies rising incomes, improved infrastructure, and increased production of goods and services. However, GDP growth alone does not necessarily guarantee improvements in human development, reductions in inequality, or sustainable progress. Education, on the other hand, is a foundational driver of human capital development, social mobility, and long-term economic resilience. It shapes a population’s capacity for innovation, civic engagement, and sustainable resource management.
+
+This project explores the critical question: **Are we growing smarter or just richer?** Specifically, we compare trends in economic growth and educational enrollment across a global sample of countries from 2000 to 2022. Using indicators from the World Bank’s World Development Indicators (WDI) dataset, we examine the relationship between GDP per capita growth rates and changes in primary, secondary, and tertiary school enrollment rates. By analyzing both dimensions together, we aim to assess whether improvements in economic conditions are matched by investments in human capital through education.
+
+# Data Description
+
+## Data Source
+
+Our dataset originates from the **World Bank's World Development Indicators (WDI)** database, accessed using the `wbgapi` Python package. The original WDI database offers over 1,600 socioeconomic indicators for more than 200 countries from 1960 to 2023.
+
+For this project, we focused on a subset of indicators relevant to economic growth and educational attainment:
+
+- **GDP_per_capita**: GDP per capita (constant 2015 USD) — NY.GDP.PCAP.KD
+- **GDP_growth**: Annual GDP growth rate (%) — NY.GDP.MKTP.KD.ZG
+- **Primary_enrollment**: Gross enrollment in primary education (%) — SE.PRM.ENRR
+- **Secondary_enrollment**: Gross enrollment in secondary education (%) — SE.SEC.ENRR
+- **Tertiary_enrollment**: Gross enrollment in tertiary education (%) — SE.TER.ENRR
+- **Education_expenditure**: Education spending as a % of GDP — SE.XPD.TOTL.GD.ZS
+- **Population**: Total population — SP.POP.TOTL
+
+## Country Selection
+
+Rather than analyzing all available countries, we **restricted the dataset to the 15 most populous countries in 2022**.  
+This choice was made to:
+- Focus on countries with large, impactful populations.
+- Increase comparability across economies of different sizes.
+- Avoid missing data from smaller or less consistently reported nations.
+
+The selected countries represent a wide range of income levels, education systems, and regional backgrounds.
+
+## Data Cleaning and Processing
+
+We undertook the following steps:
+
+1. **Data Download and Merge**:
+   - Pulled each indicator individually using the WDI API.
+   - Merged datasets on `country` and `year` keys.
+
+2. **Filtering**:
+   - Retained only recognized countries (excluding aggregates such as "World" or "Euro Area").
+   - Selected the top 15 countries by 2022 population.
+
+3. **Calculations**:
+   - Computed **year-over-year (YoY) percentage changes** for GDP per capita and all three education enrollment indicators.
+
+4. **Handling Missing Data**:
+   - For educational indicators with missing entries, we imputed missing values with the **column mean** before principal component analysis (PCA).
+
+5. **Feature Engineering**:
+   - Created an **Education Progress Index (EPI)** through **Principal Component Analysis (PCA)**, summarizing combined progress in primary, secondary, and tertiary enrollment.
+   - Computed **Compound Annual Growth Rate (CAGR)** for GDP per capita across 2000–2022.
+
+6. **Final Dataset**:
+   - 345 country-year observations (15 countries × ~23 years each).
+   - Saved to `top15_countries_with_yoy.csv` for analysis.
+
+This preparation ensured a robust, comparable dataset for investigating trends in economic growth versus educational progress.
+
+# Data Analysis
+
+We examined how economic and educational growth unfolded across the 15 most populous countries from 2000 to 2022. Our analysis combined descriptive trends, growth metrics, and quadrant-based classifications to assess whether countries are "growing smarter" or "just richer." We have chosen to show certain visualizations types for only a select number of countries in our 15-country sample to provide clear and focused insights. To avoid overwhelming readers, we have highlighted a subset to represent diverse economic and educational trends. These selected countries illustrate key patterns, outliers, and contrasts, allowing us to tell a compelling story while maintaining clarity and avoiding redundancy.
+
+## 1. Trends in GDP and Education Enrollment
+
+For each country, we visualized:
+
+- **GDP per capita** trends over time (with trendlines).
+- **Primary, Secondary, and Tertiary Enrollment** rates over time.
+
+### Ethiopia (ETH)
+
+![GDP per Capita Over Time - Ethiopia](scripts\figures\ETH_gdp_per_capita_trend.png)
+
+![Enrollment Rates Over Time - Ethiopia](scripts\figures\ETH_enrollment_trends_trend.png)
+
+### India (IND)
+
+![GDP per Capita Over Time - India](scripts\figures\IND_gdp_per_capita_trend.png)
+
+![Enrollment Rates Over Time - India](scripts\figures\IND_enrollment_trends_trend.png)
+
+### China (CHN)
+
+![GDP per Capita Over Time - China](scripts\figures\CHN_gdp_per_capita_trend.png)
+
+![Enrollment Rates Over Time - China](scripts\figures\CHN_enrollment_trends_trend.png)
+
+### Pakistan (PAK)
+
+![GDP per Capita Over Time - Pakistan](scripts\figures\PAK_gdp_per_capita_trend.png)
+
+![Enrollment Rates Over Time - Pakistan](scripts\figures\PAK_enrollment_trends_trend.png)
+
+### Egypt (EGY)
+
+![GDP per Capita Over Time - Egypt](scripts\figures\EGY_gdp_per_capita_trend.png)
+
+![Enrollment Rates Over Time - Egypt](scripts\figures\EGY_enrollment_trends_trend.png)
+
+### Democratic Republic of Congo (COD)
+
+![GDP per Capita Over Time - Congo](scripts\figures\COD_gdp_per_capita_trend.png)
+
+![Enrollment Rates Over Time - Congo](scripts\figures\COD_enrollment_trends_trend.png)
+
+## 2. Construction of Education Progress Index (EPI)
+
+We conducted Principal Component Analysis (PCA) on scaled enrollment indicators to produce a single Education Progress Index (EPI) score for each country-year.
+
+The EPI captures general educational improvement across all three levels (primary, secondary, tertiary).
+
+## 3. Growth Metrics: GDP vs. EPI
+
+We calculated two growth measures:
+
+- **GDP per Capita CAGR (Compound Annual Growth Rate)**: Measures average annual GDP growth.
+- **Total EPI Change**: Measures improvement in the composite education index over time.
+
+Countries were classified into quadrants based on their growth patterns:
+
+| Quadrant               | Description                              |
+|------------------------|------------------------------------------|
+| Smart + Rich           | GDP and EPI both increased              |
+| Rich but Not Smarter   | GDP increased but EPI stagnated/declined|
+| Smarter but Poorer     | EPI increased despite GDP stagnation    |
+| Losing on Both Fronts  | Both GDP and EPI declined               |
+
+![GDP Growth vs. Education Progress (Quadrant Classification)](scripts\figures\gdp_vs_epi_quadrants_colored.png)
+
+12 out of 15 countries fell into the "Smart + Rich" quadrant.
+
+3 countries were classified as "Rich but Not Smarter."
+
+## 4. Correlation Between Economic Growth and Education Levels
+
+We investigated the relationship between GDP per capita and enrollment rates:
+
+![Scatterplots of GDP per capita vs Primary, Secondary, and Tertiary Enrollment](scripts\figures\gdp_vs_education_correlations.png)
+
+- Weak correlation for primary education (r ≈ 0.13).
+- Moderate correlation for secondary education (r ≈ 0.50).
+- Strong correlation for tertiary education (r ≈ 0.71).
+
+Higher GDP countries tend to have higher tertiary enrollment rates, highlighting tertiary education as a key differentiator.
+
+## 5. Geographic and Group Comparisons
+
+We produced additional insights through:
+
+- Barplots of top 5 countries by GDP growth vs education progress.
+- Pie chart summarizing distribution of countries by quadrant.
+
+![Top 5 richest vs. top 5 smartest barplots](scripts\figures\top5_smart_vs_rich.png)
+
+![Pie chart of Quadrant Distribution](scripts\figures\quadrant_pie_chart.png)
+
+These visualizations demonstrate regional disparities and highlight the divergence between economic and human capital development.
+
+## 6. Focused Analysis by Quadrant
+
+We further analyzed GDP-education correlations separately for "Smart + Rich" and "Rich but Not Smarter" countries:
+
+![Scatterplot matrices of GDP vs Enrollment within each quadrant](scripts\figures\gdp_vs_education_by_quadrant.png)
+
+"Smart + Rich" countries show stronger and more consistent positive correlations, especially at tertiary levels.
+
+# Results and Discussion
+
+Our analysis reveals nuanced patterns in the relationship between economic growth and education progress among the 15 most populous countries from 2000 to 2022.
+
+## 1. Growth Classifications
+
+- **80% (12 of 15) countries** fell into the **"Smart + Rich"** quadrant, indicating simultaneous growth in both GDP per capita and education progress.
+- **20% (3 of 15) countries** were classified as **"Rich but Not Smarter,"** demonstrating economic gains without significant improvements in educational access.
+
+This suggests that for the majority of high-population countries, economic growth has been accompanied by some degree of educational advancement. However, the presence of "Rich but Not Smarter" countries highlights that growth in income alone does not guarantee improvements in human capital.
+
+## 2. GDP-Education Correlations
+
+- **Primary education enrollment** showed a weak correlation with GDP per capita (r ≈ 0.13).
+- **Secondary education enrollment** displayed a moderate correlation (r ≈ 0.50).
+- **Tertiary education enrollment** had a strong correlation (r ≈ 0.71).
+
+These findings indicate that while primary education is near-universal across income levels, higher education access remains highly dependent on economic resources. Tertiary education, in particular, is a critical dimension where disparities emerge as countries develop.
+
+## 3. Regional and Country-Specific Patterns
+
+- **China (CHN)** and **India (IND)** demonstrated both high GDP growth and strong education gains, aligning well with the "Smart + Rich" classification.
+- **Democratic Republic of Congo (COD)** and **Pakistan (PAK)**, although economically growing, showed weaker improvements in educational progress, particularly at the tertiary level.
+- Countries like **Ethiopia (ETH)** made notable strides in education despite moderate GDP growth, emphasizing that proactive education policy can drive human development even in resource-constrained environments.
+
+## 4. Sustainability and Equity Implications
+
+The strong linkage between tertiary education and GDP suggests that long-term sustainable development depends on expanding access to higher education. If countries neglect educational investment while focusing solely on economic output, they risk exacerbating inequality and stalling human capital growth.
+
+Thus, education should not be viewed merely as an outcome of growth but as a **driver** of continued, equitable, and sustainable development.
+
+# Conclusion
+
+This project sought to answer whether the world’s most populous countries are growing smarter, richer, or both. By analyzing trends from 2000 to 2022, we found that:
+
+- Most countries achieved concurrent economic and educational growth, falling into the "Smart + Rich" quadrant.
+- Economic growth alone was not sufficient to guarantee education progress, particularly at higher education levels.
+- Tertiary enrollment was the most sensitive to economic conditions, reinforcing the idea that education inequalities persist even amid overall growth.
+
+These results emphasize that economic policies aimed solely at GDP expansion are insufficient for promoting comprehensive human development. Investment in education—especially beyond the primary level—is essential for creating sustainable, resilient, and equitable societies.
+
+Future analyses could expand this work by:
+- Including measures of education quality (such as PISA scores).
+- Examining the impact of public education spending as a mediator between GDP growth and enrollment rates.
+- Incorporating post-pandemic data to assess COVID-19’s long-term effects on education and economic recovery.
+
+Ultimately, "growing smarter" must be seen as a vital objective alongside "growing richer" to ensure inclusive and lasting prosperity.
+
+# Further Reading
+
+To deepen your understanding of the data sources and thematic context of this project, the following resources are recommended:
+
+- **World Development Indicators (WDI) – World Bank**  
+  The World Bank's premier compilation of international statistics on global development, offering access to over 1,600 indicators for 217 economies.  
+  [https://databank.worldbank.org/source/world-development-indicators](https://databank.worldbank.org/source/world-development-indicators)
+
+- **wbgapi Python Package Documentation**  
+  Documentation for `wbgapi`, a Python package providing modern, pythonic access to the World Bank's data API.  
+  [https://pypi.org/project/wbgapi/](https://pypi.org/project/wbgapi/)
+
+- **World Bank – Education Overview**  
+  An overview of the World Bank's work in education, including strategies and results aimed at achieving inclusive and equitable quality education.  
+  [https://www.worldbank.org/en/topic/education/overview](https://www.worldbank.org/en/topic/education/overview)
+
+- **UNESCO Global Education Monitoring Report**  
+  The 2023 report examines the role of technology in education and its impact on learning outcomes worldwide.  
+  [https://gem-report-2023.unesco.org/](https://gem-report-2023.unesco.org/)
+
+- **UNDP Human Development Report 2021/2022**  
+  Explores how uncertainty is changing in the Anthropocene and its implications for human development.  
+  [https://hdr.undp.org/content/human-development-report-2021-22](https://hdr.undp.org/content/human-development-report-2021-22)

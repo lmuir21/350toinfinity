@@ -1,0 +1,19 @@
+---
+title: "Conclusion"
+format: html
+---
+
+This project sought to answer whether the world’s most populous countries are growing smarter, richer, or both. By analyzing trends from 2000 to 2022, we found that:
+
+- Most countries achieved concurrent economic and educational growth, falling into the "Smart + Rich" quadrant.
+- Economic growth alone was not sufficient to guarantee education progress, particularly at higher education levels.
+- Tertiary enrollment was the most sensitive to economic conditions, reinforcing the idea that education inequalities persist even amid overall growth.
+
+These results emphasize that economic policies aimed solely at GDP expansion are insufficient for promoting comprehensive human development. Investment in education—especially beyond the primary level—is essential for creating sustainable, resilient, and equitable societies.
+
+Future analyses could expand this work by:
+- Including measures of education quality (such as PISA scores).
+- Examining the impact of public education spending as a mediator between GDP growth and enrollment rates.
+- Incorporating post-pandemic data to assess COVID-19’s long-term effects on education and economic recovery.
+
+Ultimately, "growing smarter" must be seen as a vital objective alongside "growing richer" to ensure inclusive and lasting prosperity.

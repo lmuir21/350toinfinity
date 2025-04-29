@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs  # Output files for the website will be placed in the docs folder
+
+website:
+  title: "Are We Getting Smarter or Just Richer?"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Introduction"
+        href: introduction.qmd
+      - text: "Data Description"
+        href: data_description.qmd
+      - text: "Data Analysis"
+        href: data_analysis.qmd
+      - text: "Results & Discussion"
+        href: results_discussion.qmd
+      - text: "Conclusion"
+        href: conclusion.qmd
+
+format:
+  html:
+    theme: minty  # Change the theme to minty
+    css: styles.css
+
+# Add a section for the standalone report
+projects:
+  - name: "Standalone Report"
+    files: 
+      - analysis_report.qmd  # Specify the report file
+    output-dir: docs  # Ensure the report outputs to the same docs folder
