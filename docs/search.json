@@ -46,56 +46,42 @@
     "href": "index.html",
     "title": "Are We Getting Smarter or Just Richer?",
     "section": "",
-    "text": "Welcome\nThis website presents an analysis of education enrollment and economic growth trends across the 15 most populous countries from 2000 to 2022. Use the navigation bar to explore the sections of the report and see data for slected countries from our global sample."
+    "text": "Welcome\nWelcome to our analysis of education development and economic growth trends across the 15 most populous countries from 2000 to 2022. This project explores the critical question:\nAre we growing smarter, richer, or both?\nUsing data from the World Bank’s World Development Indicators (WDI), we examine the relationship between GDP per capita growth and changes in primary, secondary, and tertiary school enrollment rates.\nNavigate through the sections of this website to explore: - Introduction: Background and motivation for the study. - Data Description: Overview of the dataset and key variables. - Data Analysis: Insights into trends and growth metrics. - Results & Discussion: Key findings and their implications. - Conclusion: Final thoughts\nWe hope this analysis provides valuable insights into the interplay between education and economic development."
   },
   {
-    "objectID": "data_analysis.html",
-    "href": "data_analysis.html",
-    "title": "Data Analysis",
+    "objectID": "data_description.html",
+    "href": "data_description.html",
+    "title": "Data Description",
     "section": "",
-    "text": "We examined how economic and educational growth unfolded across the 15 most populous countries from 2000 to 2022. Our analysis combined descriptive trends, growth metrics, and quadrant-based classifications to assess whether countries are “growing smarter” or “just richer.”"
+    "text": "Our dataset originates from the World Bank’s World Development Indicators (WDI) database, accessed using the wbgapi Python package. The original WDI database offers over 1,600 socioeconomic indicators for more than 200 countries from 1960 to 2023.\nFor this project, we focused on a subset of indicators relevant to economic growth and educational attainment:\n\nGDP_per_capita: GDP per capita (constant 2015 USD) — NY.GDP.PCAP.KD\nGDP_growth: Annual GDP growth rate (%) — NY.GDP.MKTP.KD.ZG\nPrimary_enrollment: Gross enrollment in primary education (%) — SE.PRM.ENRR\nSecondary_enrollment: Gross enrollment in secondary education (%) — SE.SEC.ENRR\nTertiary_enrollment: Gross enrollment in tertiary education (%) — SE.TER.ENRR\nEducation_expenditure: Education spending as a % of GDP — SE.XPD.TOTL.GD.ZS\nPopulation: Total population — SP.POP.TOTL"
   },
   {
-    "objectID": "data_analysis.html#trends-in-gdp-and-education-enrollment",
-    "href": "data_analysis.html#trends-in-gdp-and-education-enrollment",
-    "title": "Data Analysis",
-    "section": "1. Trends in GDP and Education Enrollment",
-    "text": "1. Trends in GDP and Education Enrollment\nFor each country, we visualized:\n\nGDP per capita trends over time (with trendlines).\nPrimary, Secondary, and Tertiary Enrollment rates over time.\n\n\nEthiopia (ETH)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Ethiopia\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Ethiopia\n\n\n\n\n\nIndia (IND)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - India\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - India\n\n\n\n\n\nChina (CHN)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - China\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - China\n\n\n\n\n\nPakistan (PAK)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Pakistan\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Pakistan\n\n\n\n\n\nEgypt (EGY)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Egypt\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Egypt\n\n\n\n\n\nDemocratic Republic of Congo (COD)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Congo\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Congo"
+    "objectID": "data_description.html#data-source",
+    "href": "data_description.html#data-source",
+    "title": "Data Description",
+    "section": "",
+    "text": "Our dataset originates from the World Bank’s World Development Indicators (WDI) database, accessed using the wbgapi Python package. The original WDI database offers over 1,600 socioeconomic indicators for more than 200 countries from 1960 to 2023.\nFor this project, we focused on a subset of indicators relevant to economic growth and educational attainment:\n\nGDP_per_capita: GDP per capita (constant 2015 USD) — NY.GDP.PCAP.KD\nGDP_growth: Annual GDP growth rate (%) — NY.GDP.MKTP.KD.ZG\nPrimary_enrollment: Gross enrollment in primary education (%) — SE.PRM.ENRR\nSecondary_enrollment: Gross enrollment in secondary education (%) — SE.SEC.ENRR\nTertiary_enrollment: Gross enrollment in tertiary education (%) — SE.TER.ENRR\nEducation_expenditure: Education spending as a % of GDP — SE.XPD.TOTL.GD.ZS\nPopulation: Total population — SP.POP.TOTL"
   },
   {
-    "objectID": "data_analysis.html#construction-of-education-progress-index-epi",
-    "href": "data_analysis.html#construction-of-education-progress-index-epi",
-    "title": "Data Analysis",
-    "section": "2. Construction of Education Progress Index (EPI)",
-    "text": "2. Construction of Education Progress Index (EPI)\nWe conducted Principal Component Analysis (PCA) on scaled enrollment indicators to produce a single Education Progress Index (EPI) score for each country-year.\nThe EPI captures general educational improvement across all three levels (primary, secondary, tertiary)."
+    "objectID": "data_description.html#country-selection",
+    "href": "data_description.html#country-selection",
+    "title": "Data Description",
+    "section": "Country Selection",
+    "text": "Country Selection\nRather than analyzing all available countries, we restricted the dataset to the 15 most populous countries in 2022.\nThis choice was made to: - Focus on countries with large, impactful populations. - Increase comparability across economies of different sizes. - Avoid missing data from smaller or less consistently reported nations.\nThe selected countries represent a wide range of income levels, education systems, and regional backgrounds."
   },
   {
-    "objectID": "data_analysis.html#growth-metrics-gdp-vs.-epi",
-    "href": "data_analysis.html#growth-metrics-gdp-vs.-epi",
-    "title": "Data Analysis",
-    "section": "3. Growth Metrics: GDP vs. EPI",
-    "text": "3. Growth Metrics: GDP vs. EPI\nWe calculated two growth measures:\n\nGDP per Capita CAGR (Compound Annual Growth Rate): Measures average annual GDP growth.\nTotal EPI Change: Measures improvement in the composite education index over time.\n\nCountries were classified into quadrants based on their growth patterns:\n\n\n\nQuadrant\nDescription\n\n\n\n\nSmart + Rich\nGDP and EPI both increased\n\n\nRich but Not Smarter\nGDP increased but EPI stagnated/declined\n\n\nSmarter but Poorer\nEPI increased despite GDP stagnation\n\n\nLosing on Both Fronts\nBoth GDP and EPI declined\n\n\n\n\n\n\nGDP Growth vs. Education Progress (Quadrant Classification)\n\n\n12 out of 15 countries fell into the “Smart + Rich” quadrant.\n3 countries were classified as “Rich but Not Smarter.”"
+    "objectID": "data_description.html#data-cleaning-and-processing",
+    "href": "data_description.html#data-cleaning-and-processing",
+    "title": "Data Description",
+    "section": "Data Cleaning and Processing",
+    "text": "Data Cleaning and Processing\nWe undertook the following steps:\n\nData Download and Merge:\n\nPulled each indicator individually using the WDI API.\nMerged datasets on country and year keys.\n\nFiltering:\n\nRetained only recognized countries (excluding aggregates such as “World” or “Euro Area”).\nSelected the top 15 countries by 2022 population.\n\nCalculations:\n\nComputed year-over-year (YoY) percentage changes for GDP per capita and all three education enrollment indicators.\n\nHandling Missing Data:\n\nFor educational indicators with missing entries, we imputed missing values with the column mean before principal component analysis (PCA).\n\nFeature Engineering:\n\nCreated an Education Progress Index (EPI) through Principal Component Analysis (PCA), summarizing combined progress in primary, secondary, and tertiary enrollment.\nComputed Compound Annual Growth Rate (CAGR) for GDP per capita across 2000–2022.\n\nFinal Dataset:\n\n345 country-year observations (15 countries × ~23 years each).\nSaved to top15_countries_with_yoy.csv for analysis.\n\n\nThis preparation ensured a robust, comparable dataset for investigating trends in economic growth versus educational progress."
   },
   {
-    "objectID": "data_analysis.html#correlation-between-economic-growth-and-education-levels",
-    "href": "data_analysis.html#correlation-between-economic-growth-and-education-levels",
-    "title": "Data Analysis",
-    "section": "4. Correlation Between Economic Growth and Education Levels",
-    "text": "4. Correlation Between Economic Growth and Education Levels\nWe investigated the relationship between GDP per capita and enrollment rates:\n\n\n\nScatterplots of GDP per capita vs Primary, Secondary, and Tertiary Enrollment\n\n\n\nWeak correlation for primary education (r ≈ 0.13).\nModerate correlation for secondary education (r ≈ 0.50).\nStrong correlation for tertiary education (r ≈ 0.71).\n\nHigher GDP countries tend to have higher tertiary enrollment rates, highlighting tertiary education as a key differentiator."
-  },
-  {
-    "objectID": "data_analysis.html#geographic-and-group-comparisons",
-    "href": "data_analysis.html#geographic-and-group-comparisons",
-    "title": "Data Analysis",
-    "section": "5. Geographic and Group Comparisons",
-    "text": "5. Geographic and Group Comparisons\nWe produced additional insights through:\n\nBarplots of top 5 countries by GDP growth vs education progress.\nPie chart summarizing distribution of countries by quadrant.\n\n\n\n\nTop 5 richest vs. top 5 smartest barplots\n\n\n\n\n\nPie chart of Quadrant Distribution\n\n\nThese visualizations demonstrate regional disparities and highlight the divergence between economic and human capital development."
-  },
-  {
-    "objectID": "data_analysis.html#focused-analysis-by-quadrant",
-    "href": "data_analysis.html#focused-analysis-by-quadrant",
-    "title": "Data Analysis",
-    "section": "6. Focused Analysis by Quadrant",
-    "text": "6. Focused Analysis by Quadrant\nWe further analyzed GDP-education correlations separately for “Smart + Rich” and “Rich but Not Smarter” countries:\n\n\n\nScatterplot matrices of GDP vs Enrollment within each quadrant\n\n\n“Smart + Rich” countries show stronger and more consistent positive correlations, especially at tertiary levels."
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "This project sought to answer whether the world’s most populous countries are growing smarter, richer, or both. By analyzing trends from 2000 to 2022, we found that:\n\nMost countries achieved concurrent economic and educational growth, falling into the “Smart + Rich” quadrant.\nEconomic growth alone was not sufficient to guarantee education progress, particularly at higher education levels.\nTertiary enrollment was the most sensitive to economic conditions, reinforcing the idea that education inequalities persist even amid overall growth.\n\nThese results emphasize that economic policies aimed solely at GDP expansion are insufficient for promoting comprehensive human development. Investment in education—especially beyond the primary level—is essential for creating sustainable, resilient, and equitable societies.\nFuture analyses could expand this work by: - Including measures of education quality (such as PISA scores). - Examining the impact of public education spending as a mediator between GDP growth and enrollment rates. - Incorporating post-pandemic data to assess COVID-19’s long-term effects on education and economic recovery.\nUltimately, “growing smarter” must be seen as a vital objective alongside “growing richer” to ensure inclusive and lasting prosperity."
   },
   {
     "objectID": "analysis_report.html",
@@ -196,39 +182,88 @@
     "text": "4. Sustainability and Equity Implications\nThe strong linkage between tertiary education and GDP suggests that long-term sustainable development depends on expanding access to higher education. If countries neglect educational investment while focusing solely on economic output, they risk exacerbating inequality and stalling human capital growth.\nThus, education should not be viewed merely as an outcome of growth but as a driver of continued, equitable, and sustainable development."
   },
   {
-    "objectID": "conclusion.html",
-    "href": "conclusion.html",
-    "title": "Conclusion",
+    "objectID": "data_analysis.html",
+    "href": "data_analysis.html",
+    "title": "Data Analysis",
     "section": "",
-    "text": "This project sought to answer whether the world’s most populous countries are growing smarter, richer, or both. By analyzing trends from 2000 to 2022, we found that:\n\nMost countries achieved concurrent economic and educational growth, falling into the “Smart + Rich” quadrant.\nEconomic growth alone was not sufficient to guarantee education progress, particularly at higher education levels.\nTertiary enrollment was the most sensitive to economic conditions, reinforcing the idea that education inequalities persist even amid overall growth.\n\nThese results emphasize that economic policies aimed solely at GDP expansion are insufficient for promoting comprehensive human development. Investment in education—especially beyond the primary level—is essential for creating sustainable, resilient, and equitable societies.\nFuture analyses could expand this work by: - Including measures of education quality (such as PISA scores). - Examining the impact of public education spending as a mediator between GDP growth and enrollment rates. - Incorporating post-pandemic data to assess COVID-19’s long-term effects on education and economic recovery.\nUltimately, “growing smarter” must be seen as a vital objective alongside “growing richer” to ensure inclusive and lasting prosperity."
+    "text": "We examined how economic and educational growth unfolded across the 15 most populous countries from 2000 to 2022. Our analysis combined descriptive trends, growth metrics, and quadrant-based classifications to assess whether countries are “growing smarter” or “just richer.”"
   },
   {
-    "objectID": "data_description.html",
-    "href": "data_description.html",
-    "title": "Data Description",
+    "objectID": "data_analysis.html#trends-in-gdp-and-education-enrollment",
+    "href": "data_analysis.html#trends-in-gdp-and-education-enrollment",
+    "title": "Data Analysis",
+    "section": "1. Trends in GDP and Education Enrollment",
+    "text": "1. Trends in GDP and Education Enrollment\nFor each country, we visualized:\n\nGDP per capita trends over time (with trendlines).\nPrimary, Secondary, and Tertiary Enrollment rates over time.\n\n\nEthiopia (ETH)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Ethiopia\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Ethiopia\n\n\n\n\n\nIndia (IND)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - India\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - India\n\n\n\n\n\nChina (CHN)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - China\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - China\n\n\n\n\n\nPakistan (PAK)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Pakistan\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Pakistan\n\n\n\n\n\nEgypt (EGY)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Egypt\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Egypt\n\n\n\n\n\nDemocratic Republic of Congo (COD)\n\nGDP per Capita Over Time\n\n\n\nGDP per Capita Over Time - Congo\n\n\n\n\nEnrollment Rates Over Time\n\n\n\nEnrollment Rates Over Time - Congo"
+  },
+  {
+    "objectID": "data_analysis.html#construction-of-education-progress-index-epi",
+    "href": "data_analysis.html#construction-of-education-progress-index-epi",
+    "title": "Data Analysis",
+    "section": "2. Construction of Education Progress Index (EPI)",
+    "text": "2. Construction of Education Progress Index (EPI)\nWe conducted Principal Component Analysis (PCA) on scaled enrollment indicators to produce a single Education Progress Index (EPI) score for each country-year.\nThe EPI captures general educational improvement across all three levels (primary, secondary, tertiary)."
+  },
+  {
+    "objectID": "data_analysis.html#growth-metrics-gdp-vs.-epi",
+    "href": "data_analysis.html#growth-metrics-gdp-vs.-epi",
+    "title": "Data Analysis",
+    "section": "3. Growth Metrics: GDP vs. EPI",
+    "text": "3. Growth Metrics: GDP vs. EPI\nWe calculated two growth measures:\n\nGDP per Capita CAGR (Compound Annual Growth Rate): Measures average annual GDP growth.\nTotal EPI Change: Measures improvement in the composite education index over time.\n\nCountries were classified into quadrants based on their growth patterns:\n\n\n\nQuadrant\nDescription\n\n\n\n\nSmart + Rich\nGDP and EPI both increased\n\n\nRich but Not Smarter\nGDP increased but EPI stagnated/declined\n\n\nSmarter but Poorer\nEPI increased despite GDP stagnation\n\n\nLosing on Both Fronts\nBoth GDP and EPI declined\n\n\n\n\n\n\nGDP Growth vs. Education Progress (Quadrant Classification)\n\n\n12 out of 15 countries fell into the “Smart + Rich” quadrant.\n3 countries were classified as “Rich but Not Smarter.”"
+  },
+  {
+    "objectID": "data_analysis.html#correlation-between-economic-growth-and-education-levels",
+    "href": "data_analysis.html#correlation-between-economic-growth-and-education-levels",
+    "title": "Data Analysis",
+    "section": "4. Correlation Between Economic Growth and Education Levels",
+    "text": "4. Correlation Between Economic Growth and Education Levels\nWe investigated the relationship between GDP per capita and enrollment rates:\n\n\n\nScatterplots of GDP per capita vs Primary, Secondary, and Tertiary Enrollment\n\n\n\nWeak correlation for primary education (r ≈ 0.13).\nModerate correlation for secondary education (r ≈ 0.50).\nStrong correlation for tertiary education (r ≈ 0.71).\n\nHigher GDP countries tend to have higher tertiary enrollment rates, highlighting tertiary education as a key differentiator."
+  },
+  {
+    "objectID": "data_analysis.html#geographic-and-group-comparisons",
+    "href": "data_analysis.html#geographic-and-group-comparisons",
+    "title": "Data Analysis",
+    "section": "5. Geographic and Group Comparisons",
+    "text": "5. Geographic and Group Comparisons\nWe produced additional insights through:\n\nBarplots of top 5 countries by GDP growth vs education progress.\nPie chart summarizing distribution of countries by quadrant.\n\n\n\n\nTop 5 richest vs. top 5 smartest barplots\n\n\n\n\n\nPie chart of Quadrant Distribution\n\n\nThese visualizations demonstrate regional disparities and highlight the divergence between economic and human capital development."
+  },
+  {
+    "objectID": "data_analysis.html#focused-analysis-by-quadrant",
+    "href": "data_analysis.html#focused-analysis-by-quadrant",
+    "title": "Data Analysis",
+    "section": "6. Focused Analysis by Quadrant",
+    "text": "6. Focused Analysis by Quadrant\nWe further analyzed GDP-education correlations separately for “Smart + Rich” and “Rich but Not Smarter” countries:\n\n\n\nScatterplot matrices of GDP vs Enrollment within each quadrant\n\n\n“Smart + Rich” countries show stronger and more consistent positive correlations, especially at tertiary levels."
+  },
+  {
+    "objectID": "documentation/codebook.html",
+    "href": "documentation/codebook.html",
+    "title": "Codebook for epi_top15.csv Dataset",
     "section": "",
-    "text": "Our dataset originates from the World Bank’s World Development Indicators (WDI) database, accessed using the wbgapi Python package. The original WDI database offers over 1,600 socioeconomic indicators for more than 200 countries from 1960 to 2023.\nFor this project, we focused on a subset of indicators relevant to economic growth and educational attainment:\n\nGDP_per_capita: GDP per capita (constant 2015 USD) — NY.GDP.PCAP.KD\nGDP_growth: Annual GDP growth rate (%) — NY.GDP.MKTP.KD.ZG\nPrimary_enrollment: Gross enrollment in primary education (%) — SE.PRM.ENRR\nSecondary_enrollment: Gross enrollment in secondary education (%) — SE.SEC.ENRR\nTertiary_enrollment: Gross enrollment in tertiary education (%) — SE.TER.ENRR\nEducation_expenditure: Education spending as a % of GDP — SE.XPD.TOTL.GD.ZS\nPopulation: Total population — SP.POP.TOTL"
+    "text": "This codebook describes each variable included in the dataset epi_top15.csv, which was used for the analysis of education and economic growth trends among the 15 most populous countries (2000–2022).\n\n\n\nOverview\nVariables\nNotes\n\n\n\n\n\n\nDataset Name: epi_top15.csv\nNumber of Rows: 345 (15 countries × ~23 years each)\nNumber of Columns: 14\nTime Period: 2000–2022\nGeographic Scope: 15 most populous countries\nPurpose: Analyze trends in education enrollment and economic growth.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\nDescription\nUnit / Notes\nData Type\n\n\n\n\ncountry\nCountry ISO 3-letter code (e.g., USA, IND, CHN)\nCategorical (3-letter code)\nCategorical\n\n\nyear\nCalendar year\nInteger (2000–2022)\nInteger\n\n\nGDP_per_capita\nGDP per capita (constant 2015 USD)\nUSD\nNumeric\n\n\nGDP_growth\nAnnual GDP growth rate\nPercentage (%)\nNumeric\n\n\nPrimary_enrollment\nGross enrollment in primary education\nPercentage (%)\nNumeric\n\n\nSecondary_enrollment\nGross enrollment in secondary education\nPercentage (%)\nNumeric\n\n\nTertiary_enrollment\nGross enrollment in tertiary education\nPercentage (%)\nNumeric\n\n\nEducation_expenditure\nGovernment education expenditure as % of GDP\nPercentage (%)\nNumeric\n\n\nPopulation\nTotal national population\nNumber of people\nNumeric\n\n\nYoY_GDP_per_capita\nYear-over-year % change in GDP per capita\nPercentage (%)\nNumeric\n\n\nYoY_Primary_enrollment\nYear-over-year % change in primary enrollment\nPercentage (%)\nNumeric\n\n\nYoY_Secondary_enrollment\nYear-over-year % change in secondary enrollment\nPercentage (%)\nNumeric\n\n\nYoY_Tertiary_enrollment\nYear-over-year % change in tertiary enrollment\nPercentage (%)\nNumeric\n\n\nEducation_Progress_Index\nComposite education progress score (via PCA)\nStandardized index (unitless)\nNumeric\n\n\n\n\n\n\n\n\nMissing Data:\n\nMissing values for enrollment rates were imputed using the column mean before performing PCA.\nOther missing values were left as-is.\n\nDerived Variables:\n\nYoY_GDP_per_capita, YoY_Primary_enrollment, YoY_Secondary_enrollment, and YoY_Tertiary_enrollment were calculated as year-over-year percentage changes.\nEducation_Progress_Index was derived using Principal Component Analysis (PCA) to summarize progress across all education levels.\n\nUnits:\n\nGDP-related columns are in constant 2015 USD.\nEnrollment ratios and growth rates are percentages.\nPopulation is in absolute numbers.\n\n\n\nCodebook created on: 4/28/2025\nAuthors: Daisy Cossio, Iliyan Sherali, Liane Muir"
   },
   {
-    "objectID": "data_description.html#data-source",
-    "href": "data_description.html#data-source",
-    "title": "Data Description",
+    "objectID": "documentation/codebook.html#table-of-contents",
+    "href": "documentation/codebook.html#table-of-contents",
+    "title": "Codebook for epi_top15.csv Dataset",
     "section": "",
-    "text": "Our dataset originates from the World Bank’s World Development Indicators (WDI) database, accessed using the wbgapi Python package. The original WDI database offers over 1,600 socioeconomic indicators for more than 200 countries from 1960 to 2023.\nFor this project, we focused on a subset of indicators relevant to economic growth and educational attainment:\n\nGDP_per_capita: GDP per capita (constant 2015 USD) — NY.GDP.PCAP.KD\nGDP_growth: Annual GDP growth rate (%) — NY.GDP.MKTP.KD.ZG\nPrimary_enrollment: Gross enrollment in primary education (%) — SE.PRM.ENRR\nSecondary_enrollment: Gross enrollment in secondary education (%) — SE.SEC.ENRR\nTertiary_enrollment: Gross enrollment in tertiary education (%) — SE.TER.ENRR\nEducation_expenditure: Education spending as a % of GDP — SE.XPD.TOTL.GD.ZS\nPopulation: Total population — SP.POP.TOTL"
+    "text": "Overview\nVariables\nNotes"
   },
   {
-    "objectID": "data_description.html#country-selection",
-    "href": "data_description.html#country-selection",
-    "title": "Data Description",
-    "section": "Country Selection",
-    "text": "Country Selection\nRather than analyzing all available countries, we restricted the dataset to the 15 most populous countries in 2022.\nThis choice was made to: - Focus on countries with large, impactful populations. - Increase comparability across economies of different sizes. - Avoid missing data from smaller or less consistently reported nations.\nThe selected countries represent a wide range of income levels, education systems, and regional backgrounds."
+    "objectID": "documentation/codebook.html#overview",
+    "href": "documentation/codebook.html#overview",
+    "title": "Codebook for epi_top15.csv Dataset",
+    "section": "",
+    "text": "Dataset Name: epi_top15.csv\nNumber of Rows: 345 (15 countries × ~23 years each)\nNumber of Columns: 14\nTime Period: 2000–2022\nGeographic Scope: 15 most populous countries\nPurpose: Analyze trends in education enrollment and economic growth."
   },
   {
-    "objectID": "data_description.html#data-cleaning-and-processing",
-    "href": "data_description.html#data-cleaning-and-processing",
-    "title": "Data Description",
-    "section": "Data Cleaning and Processing",
-    "text": "Data Cleaning and Processing\nWe undertook the following steps:\n\nData Download and Merge:\n\nPulled each indicator individually using the WDI API.\nMerged datasets on country and year keys.\n\nFiltering:\n\nRetained only recognized countries (excluding aggregates such as “World” or “Euro Area”).\nSelected the top 15 countries by 2022 population.\n\nCalculations:\n\nComputed year-over-year (YoY) percentage changes for GDP per capita and all three education enrollment indicators.\n\nHandling Missing Data:\n\nFor educational indicators with missing entries, we imputed missing values with the column mean before principal component analysis (PCA).\n\nFeature Engineering:\n\nCreated an Education Progress Index (EPI) through Principal Component Analysis (PCA), summarizing combined progress in primary, secondary, and tertiary enrollment.\nComputed Compound Annual Growth Rate (CAGR) for GDP per capita across 2000–2022.\n\nFinal Dataset:\n\n345 country-year observations (15 countries × ~23 years each).\nSaved to top15_countries_with_yoy.csv for analysis.\n\n\nThis preparation ensured a robust, comparable dataset for investigating trends in economic growth versus educational progress."
+    "objectID": "documentation/codebook.html#variables",
+    "href": "documentation/codebook.html#variables",
+    "title": "Codebook for epi_top15.csv Dataset",
+    "section": "",
+    "text": "Variable\nDescription\nUnit / Notes\nData Type\n\n\n\n\ncountry\nCountry ISO 3-letter code (e.g., USA, IND, CHN)\nCategorical (3-letter code)\nCategorical\n\n\nyear\nCalendar year\nInteger (2000–2022)\nInteger\n\n\nGDP_per_capita\nGDP per capita (constant 2015 USD)\nUSD\nNumeric\n\n\nGDP_growth\nAnnual GDP growth rate\nPercentage (%)\nNumeric\n\n\nPrimary_enrollment\nGross enrollment in primary education\nPercentage (%)\nNumeric\n\n\nSecondary_enrollment\nGross enrollment in secondary education\nPercentage (%)\nNumeric\n\n\nTertiary_enrollment\nGross enrollment in tertiary education\nPercentage (%)\nNumeric\n\n\nEducation_expenditure\nGovernment education expenditure as % of GDP\nPercentage (%)\nNumeric\n\n\nPopulation\nTotal national population\nNumber of people\nNumeric\n\n\nYoY_GDP_per_capita\nYear-over-year % change in GDP per capita\nPercentage (%)\nNumeric\n\n\nYoY_Primary_enrollment\nYear-over-year % change in primary enrollment\nPercentage (%)\nNumeric\n\n\nYoY_Secondary_enrollment\nYear-over-year % change in secondary enrollment\nPercentage (%)\nNumeric\n\n\nYoY_Tertiary_enrollment\nYear-over-year % change in tertiary enrollment\nPercentage (%)\nNumeric\n\n\nEducation_Progress_Index\nComposite education progress score (via PCA)\nStandardized index (unitless)\nNumeric"
+  },
+  {
+    "objectID": "documentation/codebook.html#notes",
+    "href": "documentation/codebook.html#notes",
+    "title": "Codebook for epi_top15.csv Dataset",
+    "section": "",
+    "text": "Missing Data:\n\nMissing values for enrollment rates were imputed using the column mean before performing PCA.\nOther missing values were left as-is.\n\nDerived Variables:\n\nYoY_GDP_per_capita, YoY_Primary_enrollment, YoY_Secondary_enrollment, and YoY_Tertiary_enrollment were calculated as year-over-year percentage changes.\nEducation_Progress_Index was derived using Principal Component Analysis (PCA) to summarize progress across all education levels.\n\nUnits:\n\nGDP-related columns are in constant 2015 USD.\nEnrollment ratios and growth rates are percentages.\nPopulation is in absolute numbers.\n\n\n\nCodebook created on: 4/28/2025\nAuthors: Daisy Cossio, Iliyan Sherali, Liane Muir"
   },
   {
     "objectID": "introduction.html",
@@ -243,12 +278,5 @@
     "title": "Cleaned Up Dataset",
     "section": "",
     "text": "!pip install wbgapi\n\nRequirement already satisfied: wbgapi in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (1.0.12)\nRequirement already satisfied: requests in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (from wbgapi) (2.32.3)\nRequirement already satisfied: PyYAML in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (from wbgapi) (6.0.2)\nRequirement already satisfied: tabulate in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (from wbgapi) (0.8.10)\nRequirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (from requests-&gt;wbgapi) (2.0.4)\nRequirement already satisfied: idna&lt;4,&gt;=2.5 in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (from requests-&gt;wbgapi) (3.4)\nRequirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (from requests-&gt;wbgapi) (1.26.16)\nRequirement already satisfied: certifi&gt;=2017.4.17 in /Users/iliyansherali/anaconda3/lib/python3.11/site-packages (from requests-&gt;wbgapi) (2025.1.31)\n\n\n\nimport wbgapi as wb\nimport pandas as pd\nfrom functools import reduce\n\n# Define the World Bank indicators you want\nindicators = {\n    'GDP_per_capita': 'NY.GDP.PCAP.KD',\n    'GDP_growth': 'NY.GDP.MKTP.KD.ZG',\n    'Primary_enrollment': 'SE.PRM.ENRR',\n    'Secondary_enrollment': 'SE.SEC.ENRR',\n    'Tertiary_enrollment': 'SE.TER.ENRR',\n    'Education_expenditure': 'SE.XPD.TOTL.GD.ZS',\n    'Population': 'SP.POP.TOTL'\n}\n\nyears = list(range(2000, 2023))\nall_data = []\n\n# Pull each indicator separately\nfor col_name, indicator_code in indicators.items():\n    print(f\"📦 Downloading {col_name}...\")\n    temp = wb.data.DataFrame(indicator_code, time=years, labels=False, columns='series', index=['economy', 'time'])\n    temp.reset_index(inplace=True)\n    temp.rename(columns={'economy': 'country', 'time': 'year', indicator_code: col_name}, inplace=True)\n    \n    # Only keep what we need for clean merging\n    temp = temp[['country', 'year', col_name]]\n    all_data.append(temp)\n\n# Merge all indicator tables on country + year\nmerged_df = reduce(lambda left, right: pd.merge(left, right, on=['country', 'year'], how='outer'), all_data)\n\n# Save to CSV\nmerged_df.to_csv(\"wdi_cleaned_data.csv\", index=False)\nprint(\"✅ All indicators saved to 'wdi_cleaned_data.csv'\")\n\n\n\n\n\n📦 Downloading GDP_per_capita...\n📦 Downloading GDP_growth...\n📦 Downloading Primary_enrollment...\n📦 Downloading Secondary_enrollment...\n📦 Downloading Tertiary_enrollment...\n📦 Downloading Education_expenditure...\n📦 Downloading Population...\n✅ All indicators saved to 'wdi_cleaned_data.csv'\n\n\n\nimport sqlite3\nimport pandas as pd\n\n# Connect to the SQLite database\nconn = sqlite3.connect(\"wdi_project.db\")\n\n# Query to fetch the first 10 rows of the wdi_raw table\nquery = \"SELECT * FROM wdi_raw LIMIT 10;\"\nwdi_raw_sample = pd.read_sql_query(query, conn)\n\n# Display the result\nprint(wdi_raw_sample)\n\n  country  year  GDP_per_capita  GDP_growth  Primary_enrollment  \\\n0     ABW  2000    30199.661277    7.622921          108.326508   \n1     ABW  2001    31169.796914    4.182002          110.920418   \n2     ABW  2002    30662.321715   -0.944953          115.317001   \n3     ABW  2003    30651.945756    1.110505          113.902641   \n4     ABW  2004    32192.791947    7.293728          116.187538   \n5     ABW  2005    31249.278037   -0.383138          116.397911   \n6     ABW  2006    31038.889867    1.127411          117.467499   \n7     ABW  2007    31759.823202    3.089544          119.884132   \n8     ABW  2008    32097.040224    1.835755          118.331169   \n9     ABW  2009    28157.148989  -11.677741          120.840927   \n\n   Secondary_enrollment  Tertiary_enrollment  Education_expenditure  \\\n0             93.762329            27.973761                4.71468   \n1             95.286102            29.228010                4.79898   \n2            100.267097            28.924419                4.87220   \n3             99.435440            29.782690                    NaN   \n4             97.211769            29.293449                4.35699   \n5             95.529602            34.423012                4.62322   \n6            100.635818            32.739208                    NaN   \n7            104.846458            34.940510                4.70255   \n8             96.907494            35.152088                4.82730   \n9             99.518387            33.988548                5.79740   \n\n   Population  \n0     90588.0  \n1     91439.0  \n2     92074.0  \n3     93128.0  \n4     95138.0  \n5     97635.0  \n6     99405.0  \n7    100150.0  \n8    100917.0  \n9    101604.0  \n\n\n\nimport sqlite3\nimport pandas as pd\nimport numpy as np\nimport wbgapi as wb\n\n# Step 1: Connect to DB\nconn = sqlite3.connect(\"wdi_project.db\")\n\n# Step 2: Load full raw table\ndf = pd.read_sql_query(\"SELECT * FROM wdi_raw\", conn)\n\n# Step 3: Get only real countries (no aggregates)\nvalid_countries_df = wb.economy.DataFrame(skipAggs=True)\nvalid_countries = valid_countries_df.index.tolist()\n\n# Step 4: Filter to real countries\ndf = df[df['country'].isin(valid_countries)]\n\n# Step 5: Get top 15 countries by population in 2022\npop_2022 = df[df['year'] == 2022][['country', 'Population']]\ntop15_countries = pop_2022.sort_values(by='Population', ascending=False).head(15)['country'].tolist()\n\n# Step 6: Filter full data to those 15 countries\ndf_top15 = df[df['country'].isin(top15_countries)]\n\n# Step 7: Sort by country and year\ndf_top15 = df_top15.sort_values(by=['country', 'year'])\n\n# Step 8: Compute YoY % change for selected indicators\nindicators = ['GDP_per_capita', 'Primary_enrollment', 'Secondary_enrollment', 'Tertiary_enrollment']\n\nfor col in indicators:\n    yoy_col = f'YoY_{col}'\n    df_top15[yoy_col] = df_top15.groupby('country')[col].pct_change() * 100\n    df_top15[yoy_col] = df_top15[yoy_col].round(2)\n\n# Step 9: Save to CSV\ndf_top15.to_csv(\"top15_countries_with_yoy.csv\", index=False)\nprint(\"✅ File saved as 'top15_countries_with_yoy.csv' with year-over-year % changes\")\n\n# Step 10: Close DB connection\nconn.close()\n\n✅ File saved as 'top15_countries_with_yoy.csv' with year-over-year % changes\n\n\n/var/folders/6l/xfqxt4zj5rvdhhf45x8rl18h0000gn/T/ipykernel_85432/125329031.py:34: FutureWarning: The default fill_method='ffill' in SeriesGroupBy.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n  df_top15[yoy_col] = df_top15.groupby('country')[col].pct_change() * 100\n/var/folders/6l/xfqxt4zj5rvdhhf45x8rl18h0000gn/T/ipykernel_85432/125329031.py:34: FutureWarning: The default fill_method='ffill' in SeriesGroupBy.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n  df_top15[yoy_col] = df_top15.groupby('country')[col].pct_change() * 100\n/var/folders/6l/xfqxt4zj5rvdhhf45x8rl18h0000gn/T/ipykernel_85432/125329031.py:34: FutureWarning: The default fill_method='ffill' in SeriesGroupBy.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n  df_top15[yoy_col] = df_top15.groupby('country')[col].pct_change() * 100"
-  },
-  {
-    "objectID": "documentation/codebook.html",
-    "href": "documentation/codebook.html",
-    "title": "Codebook for epi_top15.csv Dataset",
-    "section": "",
-    "text": "Codebook for epi_top15.csv Dataset\nThis codebook describes each variable included in the dataset epi_top15.csv, which was used for the analysis of education and economic growth trends among the 15 most populous countries (2000–2022).\n\n\n\n\n\n\n\n\nVariable\nDescription\nUnit / Notes\n\n\n\n\ncountry\nCountry ISO 3-letter code (e.g., USA, IND, CHN)\nCategorical (3-letter code)\n\n\nyear\nCalendar year\nInteger (2000–2022)\n\n\nGDP_per_capita\nGDP per capita (constant 2015 USD)\nUSD\n\n\nGDP_growth\nAnnual GDP growth rate\nPercentage (%)\n\n\nPrimary_enrollment\nGross enrollment in primary education\nPercentage (%)\n\n\nSecondary_enrollment\nGross enrollment in secondary education\nPercentage (%)\n\n\nTertiary_enrollment\nGross enrollment in tertiary education\nPercentage (%)\n\n\nEducation_expenditure\nGovernment education expenditure as % of GDP\nPercentage (%)\n\n\nPopulation\nTotal national population\nNumber of people\n\n\nYoY_GDP_per_capita\nYear-over-year % change in GDP per capita\nPercentage (%)\n\n\nYoY_Primary_enrollment\nYear-over-year % change in primary enrollment\nPercentage (%)\n\n\nYoY_Secondary_enrollment\nYear-over-year % change in secondary enrollment\nPercentage (%)\n\n\nYoY_Tertiary_enrollment\nYear-over-year % change in tertiary enrollment\nPercentage (%)\n\n\nEducation_Progress_Index\nComposite education progress score (via PCA)\nStandardized index (unitless)"
   }
 ]

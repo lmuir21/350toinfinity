@@ -1,17 +1,23 @@
 ---
 title: "Are We Getting Smarter or Just Richer?"
-subtitle: "A Global Analysis of Education Enrollment and Economic Growth (2000-2022)"
+subtitle: |
+  Global Insights into Educational and Economic Growth (2000-2022)
 author: 
   - "Daisy Cossio"
   - "Iliyan Sherali"
   - "Liane Muir"
-date: "4-28-25"
+date: "4/25/25"
 format:
   html:
-    theme: cosmo
+    theme: minty
     output-dir: docs
   pdf:
     output-dir: docs
+    documentclass: article
+    fontsize: 12pt
+    geometry: margin=1in
+toc: true
+toc-depth: 2
 ---
 
 # Introduction
@@ -38,7 +44,8 @@ For this project, we focused on a subset of indicators relevant to economic grow
 
 ## Country Selection
 
-Rather than analyzing all available countries, we **restricted the dataset to the 15 most populous countries in 2022**.  
+Rather than analyzing all available countries, we **restricted the dataset to the 15 most populous countries in 2022**. 
+ 
 This choice was made to:
 - Focus on countries with large, impactful populations.
 - Increase comparability across economies of different sizes.
@@ -181,6 +188,8 @@ We further analyzed GDP-education correlations separately for "Smart + Rich" and
 ![Scatterplot matrices of GDP vs Enrollment within each quadrant](figures\gdp_vs_education_by_quadrant.png)
 
 "Smart + Rich" countries show stronger and more consistent positive correlations, especially at tertiary levels.
+
+\newpage
 
 # Results and Discussion
 

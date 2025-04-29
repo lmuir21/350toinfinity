@@ -5,4 +5,17 @@ format: html
 
 # Welcome
 
-This website presents an analysis of education enrollment and economic growth trends across the 15 most populous countries from 2000 to 2022. Use the navigation bar to explore the sections of the report and see data for slected countries from our global sample.
+Welcome to our analysis of **education development** and **economic growth trends** across the 15 most populous countries from 2000 to 2022. This project explores the critical question:
+
+**Are we growing smarter, richer, or both?**
+
+Using data from the **World Bank's World Development Indicators (WDI)**, we examine the relationship between GDP per capita growth and changes in primary, secondary, and tertiary school enrollment rates. 
+
+Navigate through the sections of this website to explore:
+- **Introduction**: Background and motivation for the study.
+- **Data Description**: Overview of the dataset and key variables.
+- **Data Analysis**: Insights into trends and growth metrics.
+- **Results & Discussion**: Key findings and their implications.
+- **Conclusion**: Final thoughts
+
+We hope this analysis provides valuable insights into the interplay between education and economic development.

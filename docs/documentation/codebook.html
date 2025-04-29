@@ -133,94 +133,159 @@ ul.task-list li input[type="checkbox"] {
 <section id="codebook-for-epi_top15.csv-dataset" class="level1">
 <h1>Codebook for <code>epi_top15.csv</code> Dataset</h1>
 <p>This codebook describes each variable included in the dataset <code>epi_top15.csv</code>, which was used for the analysis of education and economic growth trends among the 15 most populous countries (2000–2022).</p>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<ol type="1">
+<li><a href="#overview">Overview</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#notes">Notes</a></li>
+</ol>
+<hr>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ul>
+<li><strong>Dataset Name</strong>: <code>epi_top15.csv</code></li>
+<li><strong>Number of Rows</strong>: 345 (15 countries × ~23 years each)</li>
+<li><strong>Number of Columns</strong>: 14</li>
+<li><strong>Time Period</strong>: 2000–2022</li>
+<li><strong>Geographic Scope</strong>: 15 most populous countries</li>
+<li><strong>Purpose</strong>: Analyze trends in education enrollment and economic growth.</li>
+</ul>
+<hr>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 19%">
+<col style="width: 42%">
+<col style="width: 25%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Variable</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Unit / Notes</th>
+<th>Variable</th>
+<th>Description</th>
+<th>Unit / Notes</th>
+<th>Data Type</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><code>country</code></td>
-<td style="text-align: left;">Country ISO 3-letter code (e.g., USA, IND, CHN)</td>
-<td style="text-align: left;">Categorical (3-letter code)</td>
+<td><code>country</code></td>
+<td>Country ISO 3-letter code (e.g., USA, IND, CHN)</td>
+<td>Categorical (3-letter code)</td>
+<td>Categorical</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>year</code></td>
-<td style="text-align: left;">Calendar year</td>
-<td style="text-align: left;">Integer (2000–2022)</td>
+<td><code>year</code></td>
+<td>Calendar year</td>
+<td>Integer (2000–2022)</td>
+<td>Integer</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>GDP_per_capita</code></td>
-<td style="text-align: left;">GDP per capita (constant 2015 USD)</td>
-<td style="text-align: left;">USD</td>
+<td><code>GDP_per_capita</code></td>
+<td>GDP per capita (constant 2015 USD)</td>
+<td>USD</td>
+<td>Numeric</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>GDP_growth</code></td>
-<td style="text-align: left;">Annual GDP growth rate</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>GDP_growth</code></td>
+<td>Annual GDP growth rate</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>Primary_enrollment</code></td>
-<td style="text-align: left;">Gross enrollment in primary education</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>Primary_enrollment</code></td>
+<td>Gross enrollment in primary education</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>Secondary_enrollment</code></td>
-<td style="text-align: left;">Gross enrollment in secondary education</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>Secondary_enrollment</code></td>
+<td>Gross enrollment in secondary education</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>Tertiary_enrollment</code></td>
-<td style="text-align: left;">Gross enrollment in tertiary education</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>Tertiary_enrollment</code></td>
+<td>Gross enrollment in tertiary education</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>Education_expenditure</code></td>
-<td style="text-align: left;">Government education expenditure as % of GDP</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>Education_expenditure</code></td>
+<td>Government education expenditure as % of GDP</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>Population</code></td>
-<td style="text-align: left;">Total national population</td>
-<td style="text-align: left;">Number of people</td>
+<td><code>Population</code></td>
+<td>Total national population</td>
+<td>Number of people</td>
+<td>Numeric</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>YoY_GDP_per_capita</code></td>
-<td style="text-align: left;">Year-over-year % change in GDP per capita</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>YoY_GDP_per_capita</code></td>
+<td>Year-over-year % change in GDP per capita</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>YoY_Primary_enrollment</code></td>
-<td style="text-align: left;">Year-over-year % change in primary enrollment</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>YoY_Primary_enrollment</code></td>
+<td>Year-over-year % change in primary enrollment</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>YoY_Secondary_enrollment</code></td>
-<td style="text-align: left;">Year-over-year % change in secondary enrollment</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>YoY_Secondary_enrollment</code></td>
+<td>Year-over-year % change in secondary enrollment</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>YoY_Tertiary_enrollment</code></td>
-<td style="text-align: left;">Year-over-year % change in tertiary enrollment</td>
-<td style="text-align: left;">Percentage (%)</td>
+<td><code>YoY_Tertiary_enrollment</code></td>
+<td>Year-over-year % change in tertiary enrollment</td>
+<td>Percentage (%)</td>
+<td>Numeric</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>Education_Progress_Index</code></td>
-<td style="text-align: left;">Composite education progress score (via PCA)</td>
-<td style="text-align: left;">Standardized index (unitless)</td>
+<td><code>Education_Progress_Index</code></td>
+<td>Composite education progress score (via PCA)</td>
+<td>Standardized index (unitless)</td>
+<td>Numeric</td>
 </tr>
 </tbody>
 </table>
+<hr>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<ol type="1">
+<li><strong>Missing Data</strong>:
+<ul>
+<li>Missing values for enrollment rates were imputed using the column mean before performing PCA.</li>
+<li>Other missing values were left as-is.</li>
+</ul></li>
+<li><strong>Derived Variables</strong>:
+<ul>
+<li><code>YoY_GDP_per_capita</code>, <code>YoY_Primary_enrollment</code>, <code>YoY_Secondary_enrollment</code>, and <code>YoY_Tertiary_enrollment</code> were calculated as year-over-year percentage changes.</li>
+<li><code>Education_Progress_Index</code> was derived using Principal Component Analysis (PCA) to summarize progress across all education levels.</li>
+</ul></li>
+<li><strong>Units</strong>:
+<ul>
+<li>GDP-related columns are in constant 2015 USD.</li>
+<li>Enrollment ratios and growth rates are percentages.</li>
+<li>Population is in absolute numbers.</li>
+</ul></li>
+</ol>
+<hr>
+<p><em>Codebook created on: 4/28/2025</em><br>
+<em>Authors: Daisy Cossio, Iliyan Sherali, Liane Muir</em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

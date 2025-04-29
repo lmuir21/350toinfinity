@@ -9,7 +9,7 @@
 <meta name="author" content="Daisy Cossio">
 <meta name="author" content="Iliyan Sherali">
 <meta name="author" content="Liane Muir">
-<meta name="dcterms.date" content="2026-04-25">
+<meta name="dcterms.date" content="2025-04-25">
 
 <title>Are We Getting Smarter or Just Richer?</title>
 <style>
@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bd8cb2610f6c2810c4bc87234a365cf8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -128,15 +128,45 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="analysis_report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a>
+  <ul class="collapse">
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  <li><a href="#country-selection" id="toc-country-selection" class="nav-link" data-scroll-target="#country-selection">Country Selection</a></li>
+  <li><a href="#data-cleaning-and-processing" id="toc-data-cleaning-and-processing" class="nav-link" data-scroll-target="#data-cleaning-and-processing">Data Cleaning and Processing</a></li>
+  </ul></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#trends-in-gdp-and-education-enrollment" id="toc-trends-in-gdp-and-education-enrollment" class="nav-link" data-scroll-target="#trends-in-gdp-and-education-enrollment">1. Trends in GDP and Education Enrollment</a></li>
+  <li><a href="#construction-of-education-progress-index-epi" id="toc-construction-of-education-progress-index-epi" class="nav-link" data-scroll-target="#construction-of-education-progress-index-epi">2. Construction of Education Progress Index (EPI)</a></li>
+  <li><a href="#growth-metrics-gdp-vs.-epi" id="toc-growth-metrics-gdp-vs.-epi" class="nav-link" data-scroll-target="#growth-metrics-gdp-vs.-epi">3. Growth Metrics: GDP vs.&nbsp;EPI</a></li>
+  <li><a href="#correlation-between-economic-growth-and-education-levels" id="toc-correlation-between-economic-growth-and-education-levels" class="nav-link" data-scroll-target="#correlation-between-economic-growth-and-education-levels">4. Correlation Between Economic Growth and Education Levels</a></li>
+  <li><a href="#geographic-and-group-comparisons" id="toc-geographic-and-group-comparisons" class="nav-link" data-scroll-target="#geographic-and-group-comparisons">5. Geographic and Group Comparisons</a></li>
+  <li><a href="#focused-analysis-by-quadrant" id="toc-focused-analysis-by-quadrant" class="nav-link" data-scroll-target="#focused-analysis-by-quadrant">6. Focused Analysis by Quadrant</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#growth-classifications" id="toc-growth-classifications" class="nav-link" data-scroll-target="#growth-classifications">1. Growth Classifications</a></li>
+  <li><a href="#gdp-education-correlations" id="toc-gdp-education-correlations" class="nav-link" data-scroll-target="#gdp-education-correlations">2. GDP-Education Correlations</a></li>
+  <li><a href="#regional-and-country-specific-patterns" id="toc-regional-and-country-specific-patterns" class="nav-link" data-scroll-target="#regional-and-country-specific-patterns">3. Regional and Country-Specific Patterns</a></li>
+  <li><a href="#sustainability-and-equity-implications" id="toc-sustainability-and-equity-implications" class="nav-link" data-scroll-target="#sustainability-and-equity-implications">4. Sustainability and Equity Implications</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="analysis_report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Are We Getting Smarter or Just Richer?</h1>
-<p class="subtitle lead">A Global Analysis of Education Enrollment and Economic Growth (2000-2022)</p>
+<p class="subtitle lead"></p><p>Global Insights into Educational and Economic Growth (2000-2022)</p><p></p>
 </div>
 
 
@@ -155,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 25, 2026</p>
+      <p class="date">April 25, 2025</p>
     </div>
   </div>
   
@@ -190,8 +220,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="country-selection" class="level2">
 <h2 class="anchored" data-anchor-id="country-selection">Country Selection</h2>
-<p>Rather than analyzing all available countries, we <strong>restricted the dataset to the 15 most populous countries in 2022</strong>.<br>
-This choice was made to: - Focus on countries with large, impactful populations. - Increase comparability across economies of different sizes. - Avoid missing data from smaller or less consistently reported nations.</p>
+<p>Rather than analyzing all available countries, we <strong>restricted the dataset to the 15 most populous countries in 2022</strong>.</p>
+<p>This choice was made to: - Focus on countries with large, impactful populations. - Increase comparability across economies of different sizes. - Avoid missing data from smaller or less consistently reported nations.</p>
 <p>The selected countries represent a wide range of income levels, education systems, and regional backgrounds.</p>
 </section>
 <section id="data-cleaning-and-processing" class="level2">
